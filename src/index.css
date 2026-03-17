@@ -1,0 +1,164 @@
+/* Premium Tactile Play - Design System for Kids App */
+
+:root {
+  /* Typography */
+  --font-display: 'Sniglet', system-ui, sans-serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+  
+  /* Color Palette - Soft, playful, high contrast but not harsh */
+  --color-bg: #F4F7F6;            /* Soft off-white with hint of mint */
+  --color-surface: #FFFFFF;       /* Pure white for cards */
+  --color-primary: #FF7675;       /* Bright Coral */
+  --color-primary-shadow: #D63031;/* Darker Coral for 3D depth */
+  --color-secondary: #0984E3;     /* Sky solid blue */
+  --color-secondary-shadow: #005691;
+  --color-accent: #FDCB6E;        /* Sunny Yellow */
+  --color-accent-shadow: #E1A432;
+  --color-success: #55EFC4;       /* Mint Green for correct answers */
+  --color-success-shadow: #00B894;
+  --color-error: #FF7675;         /* Red for incorrect */
+  --color-error-shadow: #D63031;
+  
+  --color-text-dark: #2D3436;     /* Soft black */
+  --color-text-muted: #636E72;    /* Gray for subtitles */
+  --color-text-light: #FFFFFF;    /* White text */
+
+  /* Structural Variables */
+  --radius-sm: 12px;
+  --radius-md: 24px;
+  --radius-lg: 40px;              /* Chunky round corners */
+  --radius-pill: 9999px;
+
+  /* Shadows (Depth creates the "Toy-like" feel) */
+  --shadow-soft: 0 8px 30px rgba(0,0,0,0.04);
+  --shadow-card: 0 12px 40px rgba(45, 52, 54, 0.08);
+  --shadow-3d-button: 0 6px 0 0 var(--shadow-color, rgba(0,0,0,0.2));
+  
+  /* Motion & Easing */
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1); /* Overshoot elasticity */
+  --ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+  --duration-fast: 0.2s;
+  --duration-normal: 0.5s;
+  --duration-slow: 0.8s;
+  
+  /* Layout constraints */
+  --max-width-app: 800px;
+}
+
+/* CSS Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  min-height: 100dvh;
+  touch-action: manipulation; /* Prevent double-tap zoom on phones */
+  user-select: none; /* Make app feel more native */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+button {
+  font-family: var(--font-body);
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Base App Wrapper */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width-app);
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Reusable 3D Button Style */
+.btn-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: var(--bg-color, var(--color-primary));
+  color: var(--color-text-light);
+  font-size: 1.25rem;
+  padding: 16px 32px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 6px 0 0 var(--shadow-color, var(--color-primary-shadow)), 0 12px 20px rgba(0,0,0,0.1);
+  transition: transform 0.1s var(--ease-smooth), box-shadow 0.1s var(--ease-smooth);
+}
+
+.btn-3d:active, .btn-3d.active {
+  transform: translateY(6px);
+  box-shadow: 0 0 0 0 var(--shadow-color, var(--color-primary-shadow)), 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-3d:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: translateY(6px);
+  box-shadow: none;
+}
+
+/* Primary, Secondary variants */
+.btn-primary {
+  --bg-color: var(--color-primary);
+  --shadow-color: var(--color-primary-shadow);
+}
+
+.btn-secondary {
+  --bg-color: var(--color-secondary);
+  --shadow-color: var(--color-secondary-shadow);
+}
+
+.btn-accent {
+  --bg-color: var(--color-accent);
+  --shadow-color: var(--color-accent-shadow);
+  color: var(--color-text-dark); /* Contrast */
+}
+
+/* Animations */
+@keyframes pop-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.anim-pop {
+  animation: pop-in var(--duration-normal) var(--ease-bounce) forwards;
+}
+
+/* Utilities */
+.text-center { text-align: center; }
+.hidden { display: none; }
