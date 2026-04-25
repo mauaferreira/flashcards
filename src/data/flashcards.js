@@ -123,10 +123,20 @@ export const mockFlashcards = [
   { id: 1015, category: "Activities", word: "build a tree house", image: "/assets/treehouse.png", emoji: "🛖", pronunciationText: "build a tree house" },
   { id: 1016, category: "Activities", word: "keep a scrapbook", image: "/assets/scrapbook.png", emoji: "📒", pronunciationText: "keep a scrapbook" },
   { id: 1017, category: "Activities", word: "learn to swim", image: "/assets/learn-swim.png", emoji: "🛟", pronunciationText: "learn to swim" },
-  { id: 1018, category: "Activities", word: "go camping", image: "/assets/camping.png", emoji: "⛺", pronunciationText: "go camping" }
+  { id: 1018, category: "Activities", word: "go camping", image: "/assets/camping.png", emoji: "⛺", pronunciationText: "go camping" },
+
+  // ----------- Unit 3 - Where we live -----------
+  { id: 1101, category: "Unit 3 - Where we live", word: "in front of", image: "/assets/in-front-of.png", emoji: "📦🍎", pronunciationText: "in front of" },
+  { id: 1102, category: "Unit 3 - Where we live", word: "between", image: "/assets/between.png", emoji: "📦🍎📦", pronunciationText: "between" },
+  { id: 1103, category: "Unit 3 - Where we live", word: "next to", image: "/assets/next-to.png", emoji: "🍎➡️📦", pronunciationText: "next to" },
+  { id: 1104, category: "Unit 3 - Where we live", word: "behind", image: "/assets/behind.png", emoji: "🍎📦", pronunciationText: "behind" },
+  { id: 1105, category: "Unit 3 - Where we live", word: "on", image: "/assets/on.png", emoji: "🍎⬆️📦", pronunciationText: "on" },
+  { id: 1106, category: "Unit 3 - Where we live", word: "in", image: "/assets/in.png", emoji: "🍎📥", pronunciationText: "in" },
+  { id: 1107, category: "Unit 3 - Where we live", word: "does", image: "/assets/does.png", emoji: "👍", pronunciationText: "does" },
+  { id: 1108, category: "Unit 3 - Where we live", word: "doesn't", image: "/assets/doesnt.png", emoji: "👎", pronunciationText: "doesn't" }
 ];
 
 export const getCategories = () => {
   const categories = new Set(mockFlashcards.map(fv => fv.category));
-  return ["All words", ...Array.from(categories)];
+  return ["Todas as palavras", ...Array.from(categories)];
 };
