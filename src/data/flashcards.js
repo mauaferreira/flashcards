@@ -133,7 +133,17 @@ export const mockFlashcards = [
   { id: 1105, category: "Unit 3 - Where we live", word: "on", image: "/assets/on.png", emoji: "🍎⬆️📦", pronunciationText: "on" },
   { id: 1106, category: "Unit 3 - Where we live", word: "in", image: "/assets/in.png", emoji: "🍎📥", pronunciationText: "in" },
   { id: 1107, category: "Unit 3 - Where we live", word: "does", image: "/assets/does.png", emoji: "👍", pronunciationText: "does" },
-  { id: 1108, category: "Unit 3 - Where we live", word: "doesn't", image: "/assets/doesnt.png", emoji: "👎", pronunciationText: "doesn't" }
+  { id: 1108, category: "Unit 3 - Where we live", word: "doesn't", image: "/assets/doesnt.png", emoji: "👎", pronunciationText: "doesn't" },
+  { id: 1109, category: "Unit 3 - Where we live", word: "hospital", image: "/assets/hospital.png", emoji: "🏥", pronunciationText: "hospital" },
+  { id: 1110, category: "Unit 3 - Where we live", word: "movie theater", image: "/assets/movie-theater.png", emoji: "🍿", pronunciationText: "movie theater" },
+  { id: 1111, category: "Unit 3 - Where we live", word: "playground", image: "/assets/playground.png", emoji: "🎠", pronunciationText: "playground" },
+  { id: 1112, category: "Unit 3 - Where we live", word: "café", image: "/assets/cafe.png", emoji: "☕", pronunciationText: "cafe" },
+  { id: 1113, category: "Unit 3 - Where we live", word: "store", image: "/assets/store.png", emoji: "🏪", pronunciationText: "store" },
+  { id: 1114, category: "Unit 3 - Where we live", word: "street", image: "/assets/street.png", emoji: "🛣️", pronunciationText: "street" },
+  { id: 1115, category: "Unit 3 - Where we live", word: "bus stop", image: "/assets/bus-stop.png", emoji: "🚏", pronunciationText: "bus stop" },
+  { id: 1116, category: "Unit 3 - Where we live", word: "park", image: "/assets/park.png", emoji: "🏞️", pronunciationText: "park" },
+  { id: 1117, category: "Unit 3 - Where we live", word: "school", image: "/assets/school.png", emoji: "🏫", pronunciationText: "school" },
+  { id: 1118, category: "Unit 3 - Where we live", word: "swimming pool", image: "/assets/pool.png", emoji: "🏊", pronunciationText: "swimming pool" }
 ];
 
 export const getCategories = () => {
